@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @comment.context %>
+</p>
+
+<p>
+  <strong>Comment owner:</strong>
+  <%= @comment.comment_owner %>
+</p>
+
+<p>
+  <strong>Which receipt:</strong>
+  <%= @comment.which_receipt_id %>
+</p>
+
+<p>
+  <strong>Commentid:</strong>
+  <%= @comment.commentid %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

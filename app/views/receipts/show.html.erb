@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @receipt.location %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @receipt.date %>
+</p>
+
+<p>
+  <strong>Total cost:</strong>
+  <%= @receipt.total_cost %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @receipt.tax %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @receipt.image %>
+</p>
+
+<p>
+  <strong>Receipt owner:</strong>
+  <%= @receipt.receipt_owner %>
+</p>
+
+<p>
+  <strong>Receipt tag:</strong>
+  <%= @receipt.receipt_tag_id %>
+</p>
+
+<p>
+  <strong>Fatura:</strong>
+  <%= @receipt.fatura_id %>
+</p>
+
+<%= link_to 'Edit', edit_receipt_path(@receipt) %> |
+<%= link_to 'Back', receipts_path %>
