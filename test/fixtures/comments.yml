@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  context: MyString
+  comment_owner: 1
+  which_receipt_id: 1
+  commentid: 1
+
+two:
+  context: MyString
+  comment_owner: 1
+  which_receipt_id: 1
+  commentid: 1

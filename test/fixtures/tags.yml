@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tagname: MyString
+  tagnumber: 1
+  tagfoto: MyString
+  tagid: 1
+
+two:
+  tagname: MyString
+  tagnumber: 1
+  tagfoto: MyString
+  tagid: 1

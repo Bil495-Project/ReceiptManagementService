@@ -33,6 +33,8 @@ class UsersController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
+        #JSON is a JavaScript data format used by many Ajax libraries. Rails has built-in support for converting objects to JSON and rendering that JSON back to the browser: render json: @product
+        #You don't need to call to_json on the object that you want to render. If you use the :json option, render will automatically call to_json for you.
       end
     end
   end
