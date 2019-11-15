@@ -5,15 +5,34 @@
 <table>
   <thead>
     <tr>
-      <th>Tagname</th>
-      <th>Tagnumber</th>
-      <th>Tagfoto</th>
-      <th>Tagid</th>
+      <style>
+        th {
+          background-color: gray;
+          color: white;
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        }
+      </style>
+      <th>Tag Adı</th>
+      <th>Tag Adedi</th>
+      <th>Tag Fotosu</th>
+      <th>Tag Id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
     <% @tags.each do |tag| %>
       <tr>
         <td><%= tag.tagname %></td>
