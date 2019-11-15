@@ -25,6 +25,16 @@
   <%= @receipt.image %>
 </p>
 
+<% if @receipt.receipt_image.attached? %>
+  <!-- @post.image.present? will always return true, use attached? to check presence -->
+  <p>
+    <strong>Image:</strong>
+    <br>
+    <%= image_tag @receipt.receipt_image %>
+  </p>
+<% end %>
+
+
 <p>
   <strong>Receipt owner:</strong>
   <%= @receipt.receipt_owner %>

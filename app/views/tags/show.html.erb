@@ -14,6 +14,14 @@
   <strong>Tagfoto:</strong>
   <%= @tag.tagfoto %>
 </p>
+<% if @tag.image.attached? %>
+  <!-- @post.image.present? will always return true, use attached? to check presence -->
+  <p>
+    <strong>Image:</strong>
+    <br>
+    <%= image_tag @tag.image %>
+  </p>
+<% end %>
 
 <p>
   <strong>Tagid:</strong>

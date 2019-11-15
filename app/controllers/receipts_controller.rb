@@ -6,6 +6,9 @@ class ReceiptsController < ApplicationController
   def index
     @receipts = Receipt.all
   end
+  def post_params
+    params.require(:post).permit(:receipt_image)
+  end
 
   # GET /receipts/1
   # GET /receipts/1.json
@@ -69,6 +72,6 @@ class ReceiptsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def receipt_params
-      params.require(:receipt).permit(:location, :date, :total_cost, :tax, :image, :receipt_owner, :receipt_tag_id, :fatura_id)
+      params.require(:receipt).permit(:location, :date, :total_cost, :tax, :image, :receipt_owner, :receipt_tag_id, :fatura_id,:receipt_image)
     end
 end
