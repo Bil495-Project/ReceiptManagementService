@@ -4,7 +4,8 @@ class ReceiptsController < ApplicationController
   # GET /receipts
   # GET /receipts.json
   def index
-    @receipts = Receipt.all
+    @receipts= Receipt.search(params[:search])
+    #@receipts = Receipt.all
   end
   def post_params
     params.require(:post).permit(:receipt_image)
@@ -72,6 +73,9 @@ class ReceiptsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def receipt_params
-      params.require(:receipt).permit(:location, :date, :total_cost, :tax, :image, :receipt_owner, :receipt_tag_id, :fatura_id,:receipt_image)
+      #params.require(:receipt).permit(:location, :date, :total_cost, :tax, :image, :receipt_owner, :receipt_tag_id, :fatura_id,:receipt_image)
+      # Deleted image type string because it is not necessary anymore to store image in database.
+      params.require(:receipt).permit(:location, :date, :total_cost, :tax, :receipt_owner, :receipt_tag_id, :fatura_id,:receipt_image,:search)
+
     end
 end
