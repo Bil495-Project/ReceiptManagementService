@@ -1,0 +1,88 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2019-10-19 22:19:59.819925000 Z
+    - 2019-10-19 22:19:59.819925000 Z
+  - - schema_sha1
+    - 2da071d0884faa4d58629f93d643752e3f0867f6
+    - 2019-10-21 14:58:01.063264000 Z
+    - 2019-10-21 14:58:01.063264000 Z
+
+---
+receipts:
+  columns:
+  - fatura_id
+  - location
+  - date
+  - total_cost
+  - tax
+  - image
+  - receipt_owner
+  - receipt_tag_id
+  records: 
+  - - 1
+    - ANKARA
+    - '2019-10-21'
+    - 12.0
+    - 2.0
+    - asa
+    - 1
+    - 1
+  - - 4
+    - istanbul
+    - '2019-10-22'
+    - 40.0
+    - 4.0
+    - abc
+    - 1
+    - 1
+  - - 6
+    - ANKARA
+    - '2019-10-23'
+    - 23.0
+    - 2.0
+    - sas
+    - 1
+    - 1
+
+---
+tags:
+  columns:
+  - tagid
+  - tagname
+  - tagnumber
+  - tagfoto
+  records: 
+  - - 1
+    - elektronik
+    - 1
+    - idlkasi
+
+---
+users:
+  columns:
+  - userid
+  - name
+  - email
+  - password
+  records: 
+  - - 1
+    - ipek
+    - iakova@etu.edu.tr
+    - '1234'
+  - - 2
+    - deniz
+    - dguner@etu.edu.tr
+    - '1234'
+  - - 4
+    - merve
+    - makinci@etu.edu.tr
+    - '1234'
