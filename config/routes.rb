@@ -17,5 +17,7 @@ get "sign_in" => "authentication#sign_in"
   resources :receipts
   resources :tags
   resources :users
+  #resources automatically adds a route at GET /users/:id mapping to UsersController#show.
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

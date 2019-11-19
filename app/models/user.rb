@@ -23,7 +23,6 @@ class User < ApplicationRecord
     # code here
     user = find_by_email(email)
     puts "IN User Model find_by_email"
-    puts user.password
     #User.find_by(email: params["user"]["email"], password: params["user"]["password"])
     if user && user.password == password
       printf("in User.rb Model user has found in DB.")

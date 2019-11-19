@@ -1,7 +1,9 @@
 class AuthenticationController < ApplicationController
  def sign_in
     @user = User.new
-  end
+ end
+
+ @todo
  def register
    @user = User.new(params[:user])
 
@@ -34,7 +36,9 @@ class AuthenticationController < ApplicationController
     if user
       session[:userid] = user.userid
       flash[:notice] = 'Welcome.'
-      redirect_to :root
+      #redirect_to :root
+      # Login olduktan sonra Users controller'daki show methoduna yönlendirir ki user id'e göre bilgilerini profiline girmis gibi goruntuleyebilsin.
+      redirect_to :controller => 'users', :action => 'show', :id => user.userid
     else
 	  flash.now[:error] = 'Unknown user. Please check your username and password.'
     puts "in auth controller login user has not found in DB."
