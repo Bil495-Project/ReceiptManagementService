@@ -27,4 +27,20 @@ def self.search(search)
     Receipt.all
   end
 end
+
+
+  def self.getUserReceipts(receipt_owner)
+    receipt = self.where(receipt_owner: receipt_owner)
+
+    #receipt = find_by_receipt_owner(receipt_owner)
+    #receipt = find_by_sql("SELECT  * FROM receipts  WHERE  receipts.receipt_owner = receipt_owner")
+    if receipt
+      puts "in receipt.rb location: finding current user's receipts"
+     puts  self.where(receipt_owner: receipt_owner)
+    else
+      puts "in receipt.rb render ALL receipts"
+      Receipt.all
+    end
+  end
+
 end

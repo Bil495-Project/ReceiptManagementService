@@ -1,10 +1,24 @@
 class ReceiptsController < ApplicationController
   before_action :set_receipt, only: [:show, :edit, :update, :destroy]
+  helper_method 'current_user'
 
   # GET /receipts
   # GET /receipts.json
   def index
-    @receipts= Receipt.search(params[:search])
+    puts "Current user"
+
+    puts session[:userid]
+    if session[:userid] != nil?
+      puts "Receipt Controller: Current User is NOT Nil"
+
+    @receipts = Receipt.getUserReceipts(session[:userid])
+    else
+      puts "Receipt Controller: Current User is  Nil"
+
+      @receipts = Receipt.search(params[:search])
+
+    end
+    @receipts = Receipt.search(params[:search])
     #@receipts = Receipt.all
   end
   def post_params
@@ -16,6 +30,9 @@ class ReceiptsController < ApplicationController
   def show
   end
 
+  def showUserReceipts(receipt_owner)
+    @receipt = Receipt.getUserReceipts(receipt_owner)
+  end
   # GET /receipts/new
   def new
     @receipt = Receipt.new

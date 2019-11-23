@@ -13,6 +13,23 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color:
+          LightGray;
+}
+
+h1 {
+  color:tomato;
+  text-align: center;
+}
+
+p {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
 #flash_error {
   border: 1px solid #000066;
   padding: 4px;

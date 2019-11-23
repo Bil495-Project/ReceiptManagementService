@@ -9,6 +9,8 @@ class User < ApplicationRecord
   validates_uniqueness_of :email
   validates_uniqueness_of :name
 
+  has_many :receipts
+
   def self.authenticate_by_username(username, password)
     # code here
     user = find_by_username(username)
