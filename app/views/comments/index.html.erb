@@ -5,6 +5,13 @@
 <table>
   <thead>
     <tr>
+      <style>
+        th {
+          background-color: gray;
+          color: white;
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        }
+      </style>
       <th>Context</th>
       <th>Comment owner</th>
       <th>Which receipt</th>
@@ -13,7 +20,20 @@
     </tr>
   </thead>
 
+
   <tbody>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
     <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.context %></td>

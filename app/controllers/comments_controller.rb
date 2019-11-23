@@ -15,6 +15,9 @@ class CommentsController < ApplicationController
   # GET /comments/new
   def new
     @comment = Comment.new
+    # İPEK TODO
+    #@receipts  = Receipt.where(fatura_id:  params[:which_receipt_id])
+
   end
 
   # GET /comments/1/edit

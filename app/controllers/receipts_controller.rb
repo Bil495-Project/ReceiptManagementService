@@ -28,6 +28,8 @@ class ReceiptsController < ApplicationController
   # GET /receipts/1
   # GET /receipts/1.json
   def show
+    #Hicbir sey yazmasa da olur!!!
+    setComment
   end
 
   def showUserReceipts(receipt_owner)
@@ -95,4 +97,8 @@ class ReceiptsController < ApplicationController
       params.require(:receipt).permit(:location, :date, :total_cost, :tax, :receipt_owner, :receipt_tag_id, :fatura_id,:receipt_image,:search)
 
     end
+  def setComment()
+    @user = Receipt.find(params[:id])
+    @comments  = Comment.where(which_receipt_id:params[:id])
+  end
 end
